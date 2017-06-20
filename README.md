@@ -1,4 +1,4 @@
-# mfcc
+#imfcc
 A much simpler version of mfcc extraction. Referenced from http://kaldi-asr.org and Jesús Villalba <jesus.antonio.villalba@gmail.com>
 
 Steps to extract mfcc features from audios. More like a future reference for myself.
@@ -16,5 +16,6 @@ Explanation of what each file does:
 To run, follow the procedure: 
 1. Convert audio file to .wav format. Reference the script convert_to_wav.sh 
 2. Create train/ directory. Reference the script new_flac_to_wav.sh or gen_wav_scp.sh and an example of the train/ directory.
-2. ./run.sh (if permission denied, do chmod u+x run.sh) 
+3. ./run.sh (if permission denied, do chmod u+x run.sh). This should create a mfcc directory and store the raw_mfcc_train.#.scp files. And store everything in mfcc_cmvn.h5
+  
  

@@ -11,4 +11,6 @@ mfccdir=`pwd`/mfcc_1 #set the directory to store the extracted mfcc
 steps/make_mfcc.sh --mfcc-config conf/mfcc.conf --nj 40 --cmd "$train_cmd" `pwd`/train log/mfcc_log $mfccdir 
 
 #This step converts scp --> hdf5 (python readable) 
-steps/mfcc_cmv_ark2h5.sh train 10 ./mfcc_cmvn.h5 exp/ark2h5 
+# First argument: ./mfcc_cmvn.h5 (Convert all .scp files and store them in this file)
+# Second argument: log/ark2h5 (log file)
+steps/mfcc_cmv_ark2h5.sh train 10 ./mfcc_cmvn.h5 log/ark2h5 
