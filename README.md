@@ -29,7 +29,9 @@ Steps to extract mfcc features from audios. More like a future reference for mys
 	
 	b. If your audio files are in other format such as .sph .raw, then you need to use the bash library `sox` to convert the audio files to .wav. Reference the script `convert_to_wav.sh`. 
 		
-		I. For example, every line of the scp file should look something like this: `vacvd sox -r 16000 -b 16 -e signed-integer /export/a11/oplchot/nist-sre-train2008/vacvd-x.raw -t wav -r 16000 -|` Let's try to decode this. 
+		I. For example, every line of the scp file should look something like this: 
+		`vacvd sox -r 16000 -b 16 -e signed-integer /export/a11/oplchot/nist-sre-train2008/vacvd-x.raw -t wav -r 16000 -|` 
+		Let's try to decode this. 
 		
 		II. 
 		
