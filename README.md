@@ -21,10 +21,15 @@ Steps to extract mfcc features from audios. More like a future reference for mys
 		I. 
 3. ./run.sh (if permission denied, do chmod u+x run.sh). This should create a mfcc directory and store the raw_mfcc_train.#.scp files. And store everything in mfcc_cmvn.h5
 	a. `mfccdir=`pwd`/mfcc_1` set the directory to store the extracted mfcc. e.g. specifying `mfccdir=`pwd`/beautiful/shit/mfcc/` will store the extracted mfcc at /beautiful/shit/mfcc/
+	
 	b. `steps/make_mfcc.sh --mfcc-config conf/mfcc.conf --nj 40 --cmd "$train_cmd" `pwd`/train log/mfcc_log $mfccdir` 
+		
 		I. This function creates the extracted mfcc in binary files. 
+		
 		II. conf/mfcc.conf is where our mfcc configuration file locates at 
+		
 		III. `pwd`/train is where our train directory locates at 
+		
 		IV. log/mfcc_log is where the script will store the log files. It is helpful for debugging. 
 	
   
