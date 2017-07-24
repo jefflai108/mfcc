@@ -21,7 +21,7 @@ Steps to extract mfcc features from audios. More like a future reference for mys
 	b. utt2spk contains tuples of wav file key and their respective labels 
 
 ## To run, follow the procedure: 
-1. First and foremost, create a symbolic link to Jesus directory: `ln -s 'jesus directory path' 'jesus directory name'` 
+1. First and foremost, create a symbolic link to Jesus directory: `ln -s 'jesus directory path' 'jesus directory name'` or `git clone /home/janto/usr/src/hyperion/hyperion .`
 
 2. Create train/directory. Then, create the wav.scp (and utt2spk) file inside the train directory:
 	
