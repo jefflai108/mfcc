@@ -23,7 +23,6 @@ Steps to extract mfcc features from audios. More like a future reference for mys
 	a. `mfccdir=`pwd`/mfcc_1` set the directory to store the extracted mfcc. e.g. specifying `mfccdir=`pwd`/beautiful/shit/mfcc/` will store the extracted mfcc at /beautiful/shit/mfcc/
 	
 	b. `steps/make_mfcc.sh --mfcc-config conf/mfcc.conf --nj 40 --cmd "$train_cmd" `pwd`/train log/mfcc_log $mfccdir` 
-		
 		I. This function creates the extracted mfcc in binary files. 
 		
 		II. conf/mfcc.conf is where our mfcc configuration file locates at 
