@@ -28,7 +28,13 @@ Steps to extract mfcc features from audios. More like a future reference for mys
 	a. If your audio files are already in .wav format. You're lucky. Simply reference with slightly modify the scripts `new_flac_to_wav.sh` or `gen_wav_scp.sh`. This will create the scp file for you. 
 	
 	b. If your audio files are in other format such as .sph .raw, then you need to use the bash library `sox` to convert the audio files to .wav. Reference the script `convert_to_wav.sh`. 
-		I. 
+		
+		I. For example, every line of the scp file should look something like this: `vacvd sox -r 16000 -b 16 -e signed-integer /export/a11/oplchot/nist-sre-train2008/vacvd-x.raw -t wav -r 16000 -|` Let's try to decode this. 
+		
+		II. 
+		
+		
+		
 3. ./run.sh (if permission denied, do chmod u+x run.sh). This should create a mfcc directory and store the raw_mfcc_train.#.scp files. And store everything in mfcc_cmvn.h5
 	
 	a. `mfccdir=pwd/mfcc_1` set the directory to store the extracted mfcc. e.g. specifying `mfccdir=pwd/beautiful/shit/mfcc/` will store the extracted mfcc at /beautiful/shit/mfcc/
