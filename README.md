@@ -35,7 +35,11 @@ Steps to extract mfcc features from audios. More like a future reference for mys
 		
 		II. vacvd is your file key. 
 		
-		III. sox is a very popular library for audio processing. `/export/a11/oplchot/nist-sre-train2008/vacvd-x.raw` is your audio file path. 
+		III. sox is a very popular library for audio processing. /export/a11/oplchot/nist-sre-train2008/vacvd-x.raw is your audio file path. Everything before the file path and after sox is the characterisitc of the original audio file. Everything after the file path is the desired characteristic of your target audio file. 
+		
+		IV. For example, -r 16000 specifies samling rate at 16k. -t wav specifies your target audio file is in .wav format. 
+		
+		V. Last but not least, you need "-|" at the end. 
 		
 		
 3. ./run.sh (if permission denied, do chmod u+x run.sh). This should create a mfcc directory and store the raw_mfcc_train.#.scp files. And store everything in mfcc_cmvn.h5
