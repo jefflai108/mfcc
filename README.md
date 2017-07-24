@@ -16,9 +16,9 @@ Steps to extract mfcc features from audios. More like a future reference for mys
 ## To run, follow the procedure: 
 1. First and foremost, create a symbolic link to Jesus directory: `ln -s 'jesus directory path' 'jesus directory name'` 
 2. Create train/directory. Then, create the wav.scp (and utt2spk) file inside the train directory:
-	a. Convert audio file to .wav format. Reference the script convert_to_wav.sh 
-	sox ...
-	b. Reference the script new_flac_to_wav.sh or gen_wav_scp.sh and an example of the train/ directory.
+	a. If your audio files are already in .wav format. You're lucky. Simply reference with slightly modify the scripts `new_flac_to_wav.sh` or `gen_wav_scp.sh`. This will create the scp file for you. 
+	b. If your audio files are in other format such as .sph .raw, then you need to use the bash library `sox` to convert the audio files to .wav. Reference the script `convert_to_wav.sh`. 
+		I. 
 3. ./run.sh (if permission denied, do chmod u+x run.sh). This should create a mfcc directory and store the raw_mfcc_train.#.scp files. And store everything in mfcc_cmvn.h5
 	a. `mfccdir=`pwd`/mfcc_1` set the directory to store the extracted mfcc. e.g. specifying `mfccdir=`pwd`/beautiful/shit/mfcc/` will store the extracted mfcc at /beautiful/shit/mfcc/
 	b. `steps/make_mfcc.sh --mfcc-config conf/mfcc.conf --nj 40 --cmd "$train_cmd" `pwd`/train log/mfcc_log $mfccdir` 
